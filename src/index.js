@@ -16,10 +16,14 @@ function onSearchClick(evt) {
 function getWeather(city, days) {
   const BASE_URL = 'http://api.weatherapi.com/v1';
   const API_KEY = 'a9b2b5b585064de1aab74606242609';
+  const params = new URLSearchParams({
+    key: API_KEY,
+    q: city,
+    days: days,
+    lang: 'uk',
+  });
 
-  return fetch(
-    `${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=${days}&lang=uk`
-  ).then(resp => {
+  return fetch(`${BASE_URL}/forecast.json?${params}`).then(resp => {
     if (!resp.ok) {
       throw new Error(resp.statusText);
     }
