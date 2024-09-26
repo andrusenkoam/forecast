@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Forecast</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1>Example title</h1>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <form action="submit" class="search js-search">
+      <input class="form-text" type="text" name="query" />
+      <select class="form-select" name="days">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+        <option value="14">14</option>
+      </select>
+      <button class="search-btn">Search</button>
+    </form>
+    <ul class="weather-list js-list"></ul>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
