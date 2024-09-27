@@ -1,6 +1,6 @@
 body {
   padding: 20px;
-  background-color: rgb(184, 211, 234);
+  background-color: rgb(185, 228, 249);
 }
 
 .search {
@@ -52,6 +52,7 @@ body {
   align-items: center;
   min-width: 200px;
   padding: 10px;
-  border: 1px solid green;
+  border: 1px solid blue;
   border-radius: 5px;
+  background-color: rgb(174, 229, 246);
 }
